@@ -7,7 +7,17 @@
 }
 
 html {
-	font-size: 62.5%;
+	font-size: 62.5%; // 10px / 16px = 62.5%
+
+	@include responsive (tab-landscape) {
+		//width : 1200px
+		font-size: 56.25%; //	9px / 16px = 56.25%
+	}
+
+	@include responsive (tab-portrait) {
+		//width : 900px
+		font-size: 50%; //	8px / 16px = 50%
+	}
 }
 
 body {
