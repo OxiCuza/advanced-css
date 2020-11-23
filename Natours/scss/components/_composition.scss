@@ -9,6 +9,16 @@
 		transition: all 0.2s;
 		outline-offset: 1.1rem;
 
+		@include responsive (tab-portrait) {
+			position: relative;
+			float: left;
+			width: 33.3333%;
+			box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+			outline-offset: .8rem;
+			text-align: center;
+
+		}
+
 		&--p1 {
 			left: 0;
 			top: 0;
@@ -17,11 +27,21 @@
 		&--p2 {
 			right: 0;
 			top: 5rem;
+
+			@include responsive(tab-portrait) {
+				left: -3rem;
+				top: -1rem;
+			}
 		}
 
 		&--p3 {
 			left: 20%;
 			top: 12rem;
+
+			@include responsive(tab-portrait) {
+				left: -5rem;
+				top: 1rem;
+			}
 		}
 
 		&:hover {

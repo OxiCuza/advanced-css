@@ -4,6 +4,10 @@
 
 .u-margin-bottom-big {
 	margin-bottom: 8rem !important;
+
+	@include responsive (tab-portrait) {
+		margin-bottom: 6rem !important;
+	}
 }
 
 .u-margin-bottom-medium {

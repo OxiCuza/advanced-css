@@ -7,6 +7,10 @@
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
+
+        @include responsive(tab-portrait) {
+            margin-bottom: 5rem;
+        }
     }
 
     &__logo {
@@ -18,6 +22,11 @@
         border-top: 2px solid $color-text-dark;
         padding-top: 2rem;
         display: inline-block;
+
+        @include responsive(tab-portrait) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list {
@@ -33,7 +42,9 @@
     }
 
     &__link {
-        &:link, &:visited {
+
+        &:link,
+        &:visited {
             color: $color-light-1;
             background-color: $color-text-dark-3;
             text-decoration: none;
@@ -42,7 +53,8 @@
             transition: all .2s;
         }
 
-        &:hover, &:active {
+        &:hover,
+        &:active {
             color: $color-primary;
             box-shadow: 0 1rem 2rem rgba($color-black, .5);
             transform: rotate(5deg) scale(1.2);
@@ -53,6 +65,11 @@
         border-top: 2px solid $color-text-dark;
         padding-top: 2rem;
         width: 85%;
-        float: right;;
+        float: right;
+
+        @include responsive(tab-portrait) {
+            width: 100%;
+            float: none;
+        }
     }
 }
